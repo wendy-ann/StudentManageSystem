@@ -1,0 +1,107 @@
+-- MySQL dump 10.13  Distrib 5.7.19, for Win64 (x86_64)
+--
+-- Host: localhost    Database: studentmanage
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `basicinformation`
+--
+
+DROP TABLE IF EXISTS `basicinformation`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `basicinformation` (
+  `Id` int(11) NOT NULL,
+  `Name` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `Sex` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `Age` int(11) NOT NULL,
+  `Tel` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `Nation` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `basicinformation`
+--
+
+LOCK TABLES `basicinformation` WRITE;
+/*!40000 ALTER TABLE `basicinformation` DISABLE KEYS */;
+INSERT INTO `basicinformation` VALUES (1,'张三','男',17,'13746802468','汉族'),(2,'李四','女',22,'12423543656','汉族'),(3,'王五','男',24,'15346546756','满族'),(4,'赵六','男',21,'14541543553','汉族'),(5,'孙七','女',22,'12343545646','汉族'),(6,'周八','男',45,'66565746474','汉族'),(7,'张庆','男',21,'18758723959','满族'),(8,'周金泞','女',23,'14254536566','汉族'),(9,'李紫','女',24,'14543654367','汉族'),(10,'钱云涛','男',40,'25234565643','汉族'),(11,'李哈','男',24,'14235345665','汉族'),(12,'张清','女',22,'13453465465','回族'),(13,'周洲','女',21,'14534536566','回族'),(14,'马可','男',21,'13425454334','汉族'),(15,'哥伦布','男',31,'19077298585','回族'),(16,'郑成功','男',22,'17987599545','汉族'),(17,'张浩然','男',24,'17877797895','汉族'),(18,'张金明','女',33,'15847598545','蒙古族'),(19,'周玉清','男',13,'15346956663','彝族'),(20,'张国庆','男',23,'14454365645','汉族');
+/*!40000 ALTER TABLE `basicinformation` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `login`
+--
+
+DROP TABLE IF EXISTS `login`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `login` (
+  `User` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `Password` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`User`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `login`
+--
+
+LOCK TABLES `login` WRITE;
+/*!40000 ALTER TABLE `login` DISABLE KEYS */;
+INSERT INTO `login` VALUES ('name','123456');
+/*!40000 ALTER TABLE `login` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `score`
+--
+
+DROP TABLE IF EXISTS `score`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `score` (
+  `序号` int(11) NOT NULL,
+  `姓名` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
+  `微积分` int(11) NOT NULL,
+  `大学物理` int(11) NOT NULL,
+  `集合论图论` int(11) NOT NULL,
+  `中国近代史` int(11) NOT NULL,
+  PRIMARY KEY (`序号`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `score`
+--
+
+LOCK TABLES `score` WRITE;
+/*!40000 ALTER TABLE `score` DISABLE KEYS */;
+INSERT INTO `score` VALUES (1,'张三',89,87,67,78),(2,'李四',89,90,99,88),(3,'王五',56,89,90,98),(4,'赵六',76,67,76,76),(5,'孙七',86,57,86,97),(6,'周八',78,56,65,76),(7,'王涛',45,56,86,70),(8,'吴昊泽',83,88,79,98),(9,'汪家琪',89,99,97,100),(10,'冯强',80,79,76,80),(11,'黄逸雅',90,90,68,76),(12,'张晴凌',88,98,78,100),(13,'张可',89,90,90,99),(14,'马克',89,76,89,90),(15,'哥伦布',80,76,80,80),(16,'周瑜',87,79,80,89),(17,'曹操',89,89,80,99),(18,'诸葛亮',99,79,98,98),(19,'朱朱',79,89,90,80),(20,'张华',89,89,89,80);
+/*!40000 ALTER TABLE `score` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-08-01 15:46:09
